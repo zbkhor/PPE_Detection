@@ -1,0 +1,285 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <Name>SafetyManagerApp</Name>
+    <RootNamespace>SafetyManagerApp</RootNamespace>
+    <InterpreterId>
+    </InterpreterId>
+    <SuppressEnvironmentCreationPrompt>True</SuppressEnvironmentCreationPrompt>
+    <SuppressPackageInstallationPrompt>True</SuppressPackageInstallationPrompt>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>9cf0d4cc-baa6-40e1-8c27-09bd5a05a4bd</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <ProjectTypeGuids>{5F0BE9CA-D677-4A4D-8806-6076C0FAAD37};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <StartupFile>manage.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <LaunchProvider>Django launcher</LaunchProvider>
+    <DjangoSettingsModule>SafetyManagerApp.settings</DjangoSettingsModule>
+    <WebBrowserUrl>http://localhost</WebBrowserUrl>
+    <OutputPath>.</OutputPath>
+    <SuppressCollectPythonCloudServiceFiles>true</SuppressCollectPythonCloudServiceFiles>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="api\accesstokens\serializers.py" />
+    <Compile Include="api\accesstokens\views.py" />
+    <Compile Include="api\channels\serializers.py" />
+    <Compile Include="api\channels\views.py" />
+    <Compile Include="api\dbsettings\views.py" />
+    <Compile Include="api\details\views.py" />
+    <Compile Include="api\detection\detectionModels\advanceObjectDetection.py" />
+    <Compile Include="api\detection\serializers.py" />
+    <Compile Include="api\equipments\serializers.py" />
+    <Compile Include="api\equipments\views.py" />
+    <Compile Include="api\logs\serializers.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="api\ppeselection\serializers.py" />
+    <Compile Include="api\ppeselection\views.py" />
+    <Compile Include="api\detection\views.py" />
+    <Compile Include="api\slack\views.py" />
+    <Compile Include="frontend_visitor\src\components\detection_process\loaders\PersonDetectionLoader.vue">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="manage.py" />
+    <Compile Include="SafetyManagerApp\forms.py" />
+    <Compile Include="api\logs\views.py" />
+    <Compile Include="SafetyManagerApp\models.py" />
+    <Compile Include="SafetyManagerApp\router.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SafetyManagerApp\__init__.py" />
+    <Compile Include="SafetyManagerApp\settings.py" />
+    <Compile Include="SafetyManagerApp\urls.py" />
+    <Compile Include="SafetyManagerApp\wsgi.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="api\detection\detectionModels\GlovesModel\gloves_frozen_inference_graph.pb" />
+    <Content Include="api\detection\detectionModels\GlovesModel\gloves_graph.pbtxt" />
+    <Content Include="api\detection\detectionModels\HardHatModel\Hardhat_frozen_inference_graph.pb" />
+    <Content Include="api\detection\detectionModels\HardHatModel\Hardhat_graph.pbtxt" />
+    <Content Include="api\detection\detectionModels\PersonModel\Person_frozen_inference_graph.pb" />
+    <Content Include="api\detection\detectionModels\HumanBodyPartsModel\humanbodyparts_graph_opt.pb" />
+    <Content Include="api\detection\detectionModels\objectDetection.py">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="api\detection\detectionModels\PersonModel\Person_ssd_mobilenet_v1_coco.pbtxt" />
+    <Content Include="db.sqlite3" />
+    <Content Include="frontend\src\assets\documentation\documentation.pdf" />
+    <Content Include="frontend\.gitignore" />
+    <Content Include="frontend\babel.config.js" />
+    <Content Include="frontend\package-lock.json" />
+    <Content Include="frontend\package.json" />
+    <Content Include="frontend\public\favicon.ico" />
+    <Content Include="frontend\public\index.html" />
+    <Content Include="frontend\README.md" />
+    <Content Include="frontend\src\App.vue" />
+    <Content Include="frontend\src\assets\sass\styles.scss" />
+    <Content Include="frontend\src\assets\fonts\woff2\open-sans-v17-latin-300.woff2" />
+    <Content Include="frontend\src\assets\fonts\woff2\open-sans-v17-latin-300italic.woff2" />
+    <Content Include="frontend\src\assets\fonts\woff2\open-sans-v17-latin-600.woff2" />
+    <Content Include="frontend\src\assets\fonts\woff2\open-sans-v17-latin-600italic.woff2" />
+    <Content Include="frontend\src\assets\fonts\woff2\open-sans-v17-latin-700.woff2" />
+    <Content Include="frontend\src\assets\fonts\woff2\open-sans-v17-latin-700italic.woff2" />
+    <Content Include="frontend\src\assets\fonts\woff2\open-sans-v17-latin-800.woff2" />
+    <Content Include="frontend\src\assets\fonts\woff2\open-sans-v17-latin-800italic.woff2" />
+    <Content Include="frontend\src\assets\fonts\woff2\open-sans-v17-latin-italic.woff2" />
+    <Content Include="frontend\src\assets\fonts\woff2\open-sans-v17-latin-regular.woff2" />
+    <Content Include="frontend\src\assets\fonts\woff\open-sans-v17-latin-300.woff" />
+    <Content Include="frontend\src\assets\fonts\woff\open-sans-v17-latin-300italic.woff" />
+    <Content Include="frontend\src\assets\fonts\woff\open-sans-v17-latin-600.woff" />
+    <Content Include="frontend\src\assets\fonts\woff\open-sans-v17-latin-600italic.woff" />
+    <Content Include="frontend\src\assets\fonts\woff\open-sans-v17-latin-700.woff" />
+    <Content Include="frontend\src\assets\fonts\woff\open-sans-v17-latin-700italic.woff" />
+    <Content Include="frontend\src\assets\fonts\woff\open-sans-v17-latin-800.woff" />
+    <Content Include="frontend\src\assets\fonts\woff\open-sans-v17-latin-800italic.woff" />
+    <Content Include="frontend\src\assets\fonts\woff\open-sans-v17-latin-italic.woff" />
+    <Content Include="frontend\src\assets\fonts\woff\open-sans-v17-latin-regular.woff" />
+    <Content Include="frontend\src\components\logos\DsacLogo.vue" />
+    <Content Include="frontend\src\components\logos\EctcLogo.vue" />
+    <Content Include="frontend\src\components\ppe_selection\EquipmentSelection.vue" />
+    <Content Include="frontend\src\components\settings\settings.vue" />
+    <Content Include="frontend\src\views\Error404.vue">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="frontend\src\components\home\HomeEquipmentList.vue" />
+    <Content Include="frontend\src\components\home\HomeCamera.vue" />
+    <Content Include="frontend\src\components\home\HomeBarChart.vue" />
+    <Content Include="frontend\src\components\home\HomeLineChart.vue" />
+    <Content Include="frontend\src\components\manage_logs\ManageLogsTable.vue" />
+    <Content Include="frontend\src\components\slack_notifications\SlackNotif.vue" />
+    <Content Include="frontend\src\main.js" />
+    <Content Include="frontend\src\plugins\vuetify.js" />
+    <Content Include="frontend\src\plugins\vuetify\lightTheme.js" />
+    <Content Include="frontend\src\router\index.js" />
+    <Content Include="frontend\src\views\ManageLogs.vue" />
+    <Content Include="frontend\src\views\SlackNotifications.vue" />
+    <Content Include="frontend\src\views\Settings.vue" />
+    <Content Include="frontend\src\views\PPESelection.vue" />
+    <Content Include="frontend\src\views\Home.vue" />
+    <Content Include="frontend\vue.config.js" />
+    <Content Include="frontend_visitor\.gitignore" />
+    <Content Include="frontend_visitor\babel.config.js" />
+    <Content Include="frontend_visitor\package-lock.json" />
+    <Content Include="frontend_visitor\package.json" />
+    <Content Include="frontend_visitor\public\favicon.ico" />
+    <Content Include="frontend_visitor\public\index.html" />
+    <Content Include="frontend_visitor\README.md" />
+    <Content Include="frontend_visitor\src\App.vue" />
+    <Content Include="frontend_visitor\src\assets\fonts\woff2\open-sans-v17-latin-300.woff2" />
+    <Content Include="frontend_visitor\src\assets\fonts\woff2\open-sans-v17-latin-300italic.woff2" />
+    <Content Include="frontend_visitor\src\assets\fonts\woff2\open-sans-v17-latin-600.woff2" />
+    <Content Include="frontend_visitor\src\assets\fonts\woff2\open-sans-v17-latin-600italic.woff2" />
+    <Content Include="frontend_visitor\src\assets\fonts\woff2\open-sans-v17-latin-italic.woff2" />
+    <Content Include="frontend_visitor\src\assets\fonts\woff2\open-sans-v17-latin-regular.woff2" />
+    <Content Include="frontend_visitor\src\assets\fonts\woff\open-sans-v17-latin-300.woff" />
+    <Content Include="frontend_visitor\src\assets\fonts\woff\open-sans-v17-latin-300italic.woff" />
+    <Content Include="frontend_visitor\src\assets\fonts\woff\open-sans-v17-latin-600.woff" />
+    <Content Include="frontend_visitor\src\assets\fonts\woff\open-sans-v17-latin-600italic.woff" />
+    <Content Include="frontend_visitor\src\assets\fonts\woff\open-sans-v17-latin-italic.woff" />
+    <Content Include="frontend_visitor\src\assets\fonts\woff\open-sans-v17-latin-regular.woff" />
+    <Content Include="frontend_visitor\src\assets\sass\styles.scss">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="frontend_visitor\src\components\detection_process\icons\bootsIcon.vue" />
+    <Content Include="frontend_visitor\src\components\detection_process\icons\pantsIcon.vue" />
+    <Content Include="frontend_visitor\src\components\detection_process\icons\shirtIcon.vue">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="frontend_visitor\src\components\detection_process\loaders\TickIconLoader.vue">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="frontend_visitor\src\components\detection_process\loaders\TimerLoader.vue">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="frontend_visitor\src\components\detection_process\ResultsDisplay.vue" />
+    <Content Include="frontend_visitor\src\components\detection_process\SimpleDetection.vue" />
+    <Content Include="frontend_visitor\src\components\detection_process\DetectionGuide.vue" />
+    <Content Include="frontend_visitor\src\components\detection_process\Loader.vue" />
+    <Content Include="frontend_visitor\src\components\console\MediaSelection.vue" />
+    <Content Include="frontend_visitor\src\components\console\ResolutionSelection.vue" />
+    <Content Include="frontend_visitor\src\components\detection_process\StartScreen.vue" />
+    <Content Include="frontend_visitor\src\components\logos\DsacLogo.vue" />
+    <Content Include="frontend_visitor\src\components\logos\EctcLogo.vue" />
+    <Content Include="frontend_visitor\src\main.js" />
+    <Content Include="frontend_visitor\src\plugins\vuetify.js" />
+    <Content Include="frontend_visitor\src\plugins\vuetify\lightTheme.js" />
+    <Content Include="frontend_visitor\src\router\index.js" />
+    <Content Include="frontend_visitor\src\store\index.js" />
+    <Content Include="frontend_visitor\src\views\Home.vue" />
+    <Content Include="frontend_visitor\vue.config.js" />
+    <Content Include="requirements.txt" />
+    <Content Include="templates\visitor.html" />
+    <Content Include="templates\application.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="api\accesstokens\" />
+    <Folder Include="api\channels\" />
+    <Folder Include="api\detection\" />
+    <Folder Include="api\detection\detectionModels\" />
+    <Folder Include="api\dbsettings\" />
+    <Folder Include="api\detection\detectionModels\HardHatModel\" />
+    <Folder Include="api\detection\detectionModels\GlovesModel\" />
+    <Folder Include="api\detection\detectionModels\HumanBodyPartsModel\" />
+    <Folder Include="api\detection\detectionModels\PersonModel\" />
+    <Folder Include="api\slack\" />
+    <Folder Include="api\ppeselection\" />
+    <Folder Include="frontend\" />
+    <Folder Include="frontend\public\" />
+    <Folder Include="frontend\src\" />
+    <Folder Include="frontend\src\assets\" />
+    <Folder Include="frontend\src\assets\fonts\" />
+    <Folder Include="frontend\src\assets\sass\" />
+    <Folder Include="frontend\src\assets\fonts\woff2\" />
+    <Folder Include="frontend\src\assets\fonts\woff\" />
+    <Folder Include="frontend\src\components\" />
+    <Folder Include="frontend\src\components\home\" />
+    <Folder Include="frontend\src\components\manage_logs\" />
+    <Folder Include="frontend\src\components\logos\" />
+    <Folder Include="frontend\src\components\settings\" />
+    <Folder Include="frontend\src\components\ppe_selection\" />
+    <Folder Include="frontend\src\components\slack_notifications\" />
+    <Folder Include="frontend\src\plugins\" />
+    <Folder Include="frontend\src\plugins\vuetify\" />
+    <Folder Include="frontend\src\router\" />
+    <Folder Include="frontend\src\views\" />
+    <Folder Include="api\logs\" />
+    <Folder Include="api\equipments\" />
+    <Folder Include="api\details\" />
+    <Folder Include="api\" />
+    <Folder Include="frontend_visitor\" />
+    <Folder Include="frontend_visitor\public\" />
+    <Folder Include="frontend_visitor\src\" />
+    <Folder Include="frontend_visitor\src\assets\" />
+    <Folder Include="frontend_visitor\src\assets\fonts\" />
+    <Folder Include="frontend_visitor\src\assets\fonts\woff2\" />
+    <Folder Include="frontend_visitor\src\assets\fonts\woff\" />
+    <Folder Include="frontend_visitor\src\assets\sass\" />
+    <Folder Include="frontend_visitor\src\components\" />
+    <Folder Include="frontend_visitor\src\components\console\" />
+    <Folder Include="frontend_visitor\src\components\detection_process\" />
+    <Folder Include="frontend_visitor\src\components\detection_process\loaders\" />
+    <Folder Include="frontend_visitor\src\components\detection_process\icons\" />
+    <Folder Include="frontend_visitor\src\components\logos\" />
+    <Folder Include="frontend_visitor\src\plugins\" />
+    <Folder Include="frontend_visitor\src\plugins\vuetify\" />
+    <Folder Include="frontend_visitor\src\router\" />
+    <Folder Include="frontend_visitor\src\store\" />
+    <Folder Include="frontend_visitor\src\views\" />
+    <Folder Include="frontend\src\assets\documentation\" />
+    <Folder Include="SafetyManagerApp\" />
+    <Folder Include="templates\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Django.targets" />
+  <!-- Specify pre- and post-build commands in the BeforeBuild and 
+       AfterBuild targets below. -->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <AutoAssignPort>True</AutoAssignPort>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

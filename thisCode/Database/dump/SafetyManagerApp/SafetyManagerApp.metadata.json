@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"SafetyManagerApp.SafetyManagerApp"}],"uuid":"9ee61c0473ea456f99a580af399995ff"}

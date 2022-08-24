@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"SafetyManagerApp.django_migrations"},{"v":{"$numberInt":"2"},"unique":true,"key":{"id":{"$numberInt":"1"}},"name":"__primary_key__","ns":"SafetyManagerApp.django_migrations"}],"uuid":"e5b4fb3db93e48b88a503cd8487d0bc4"}

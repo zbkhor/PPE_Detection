@@ -1,0 +1,36 @@
+<!--
+    Author: Wang Wei Liang Matthew
+    Date Written: 10/08/2020
+-->
+<template>
+    <div>
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            style="margin: auto; background: none; display: block; shape-rendering: auto;"
+            width="100px"
+            height="100px"
+            viewBox="0 0 100 100"
+            preserveAspectRatio="xMidYMid"
+        >
+            <circle
+                cx="50"
+                cy="50"
+                fill="none"
+                stroke="#ffffff"
+                stroke-width="4"
+                r="31"
+                stroke-dasharray="146.08405839192537 50.69468613064179"
+            >
+                <animateTransform
+                    attributeName="transform"
+                    type="rotate"
+                    repeatCount="indefinite"
+                    dur="1s"
+                    values="0 50 50;360 50 50"
+                    keyTimes="0;1"
+                ></animateTransform>
+            </circle>
+        </svg>
+    </div>
+</template>
