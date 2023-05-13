@@ -1,0 +1,34 @@
+CREATE TABLE "SafetyManagerApp_equipment" (
+	"equipmentName" varchar(100),
+	"equipmentIcon" varchar(100),
+	id integer
+);
+
+CREATE TABLE "SafetyManagerApp_log" (
+	image text,
+	time timestamp,
+	"objectsDetected" text[],
+	"objectsViolated" text[],
+	id serial
+);
+
+CREATE TABLE "SafetyManagerApp_accesstoken" (
+	"tokenStr" varchar(100),
+	"isValid" boolean,
+	id integer
+);
+
+CREATE TABLE "SafetyManagerApp_channel" (
+	"channelStr" varchar(100),
+	"isValid" boolean,
+	"tokenStr" varchar(100),
+	id integer
+);
+
+CREATE TABLE "SafetyManagerApp_ppeselection" (
+	timestamp timestamp,
+	"selectionEquipment" text[],
+	id integer
+);
+
+SELECT SETVAL(pg_get_serial_sequence('"SafetyManagerApp_log"', 'id'), 809);
