@@ -15,7 +15,7 @@ from rest_framework.response import Response
 from rest_framework.views import APIView 
 from SafetyManagerApp.models import details, log, equipmentList,tensorflow2
 from .serializers import LogsSerializer 
-from django.shortcuts import render, render_to_response
+from django.shortcuts import render
 from django.contrib.sites.shortcuts import get_current_site
 import requests
 import numpy as np 

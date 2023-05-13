@@ -90,13 +90,13 @@ class equipmentList(object):
     
 class conditionList(object):
     def __init__(self):
-        self.equipmentList = condition.objects.values() 
+        self.equipmentList = equipment.objects.values() 
 
     def conditionDict(self): 
         conditionDictionary = {}
         for dict in self.equipmentList:
             id = dict.get('id')
-            name = dict.get('condition')
+            name = dict.get('equipmentName')
             conditionDictionary.update({id : name}) 
         return conditionDictionary
 
@@ -104,6 +104,6 @@ class conditionList(object):
         conditionidDictionary = {}
         for dict in self.equipmentList:
             id = dict.get('id')
-            name = dict.get('condition')
+            name = dict.get('equipmentName')
             conditionidDictionary.update({name : id}) 
         return conditionidDictionary

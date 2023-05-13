@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'api',
     'api.detection.detectionModels',
     'django.contrib.sites',
+    'corsheaders'
 ]
 
 # Middleware framework
@@ -61,6 +62,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 LANGUAGE_CODE = 'en-us'
 
@@ -86,7 +88,10 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'SafetyManagerApp.wsgi.application'
-
+CORS_ALLOWED_ORIGINS = [    'http://127.0.0.1:8081','http://127.0.0.1:8080','http://127.0.0.1:8000',]
+CORS_ALLOWED_ORIGIN_REGEXES = [
+    r"^http://127\.0\.0\.1:8080$",
+]
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
@@ -102,7 +107,7 @@ DATABASES = {
        'ENGINE': 'django.db.backends.postgresql_psycopg2',
        'NAME': 'SafetyManagerApp',
        'USER': 'postgres',
-       'PASSWORD': '20020215Zb!',
+       'PASSWORD': '20020215Zb!!!!!',
        'HOST': 'localhost',
    }
 }

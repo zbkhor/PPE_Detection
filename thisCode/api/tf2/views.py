@@ -16,7 +16,7 @@ from rest_framework.views import APIView
 from SafetyManagerApp.models import details, log, equipmentList,tensorflow2,conditionList
 
 from .serializers import tf2Serializer 
-from django.shortcuts import render, render_to_response
+from django.shortcuts import render
 from django.contrib.sites.shortcuts import get_current_site
 import requests
 import numpy as np 
@@ -186,11 +186,13 @@ class tf2View(APIView):
                              return Response (content ,status=status.HTTP_200_OK )
                          else :
                              # raise error if action wasnt successful
-                             content = {"Success": "Log is saved and message sent to manager "} 
-                             raise Exception(response.content)
+                             content = {"Success": "Log is saved and message sent to manager "}
+                             error_response = response.content.decode('utf-8')  # Decode the response content to string
+                             content["Error"] = error_response
+                             return Response(error_response, status=status.HTTP_400_BAD_REQUEST)
                      except :
                          # return error response
-                         content = {"Success": "Log is saved and error while sending message to safety manager " } 
+                         content = {"Success": logentry.condition } 
                          return Response (content ,status=status.HTTP_400_BAD_REQUEST )
 
              except Exception as ex:

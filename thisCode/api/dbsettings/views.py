@@ -72,7 +72,7 @@ def getLogs():
                     # convert variable to list
                     listObjectViolated = list(eachLog.ObjectViolated) 
                     listcondition = list(eachLog.condition)
-                    
+                    print(listcondition)
                     # #checks if log was compliant
                     # if listobjectsViolated :
                     #     viewlog.compliant = False
@@ -84,6 +84,7 @@ def getLogs():
                     #  get names of equipment from id
                     viewlog.ObjectViolated= getobjectstring (listObjectViolated)
                     viewlog.condition= getconditionstring (listcondition)
+                    print(getconditionstring (listcondition))
 
                     # initialize image base64 code to object         
                     # viewlog.image=eachLog.image  
