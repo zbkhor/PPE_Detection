@@ -37,6 +37,7 @@ class AccessTokenView(APIView):
             for accessTokenLog in accessTokens :
                  accessTokenLog.tokenStr = 'xoxb-xxxxxxxxxx-xxxxxx-'+accessTokenLog.tokenStr[-4:]
 
+
             # initialze serializer with records
             serializer = AccessTokenSerializer(accessTokens, many=True)
 
